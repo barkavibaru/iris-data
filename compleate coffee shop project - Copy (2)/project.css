@@ -1,0 +1,741 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
+
+:root
+{
+    --main-color:#be9c79;
+    --black:#333;
+    --white:#fff;
+    --light-color:#666;
+    --border:2px solid var(--black);
+    --box-shadow:0 .10px 50px rgb(5, 6, 5);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding:0;
+    box-sizing: border-box; 
+    outline:none; border:none;  
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* select the text background color change */
+*::selection
+{
+  background-color:var(--main-color);
+  color: var(--white);
+
+}
+
+/* scroll width and height */
+::-webkit-scrollbar
+{
+  height: 10px;
+  width: 10px;
+}
+
+/* scroll track */
+ ::-webkit-scrollbar-track
+{
+background-color: transparent;
+} 
+
+/* scroll handle */
+::-webkit-scrollbar-thumb
+{
+background-color: var(--main-color);
+}
+
+html
+{
+  font-size:10px;
+  /*  hide horizondal scrollbar*/
+  overflow-x: hidden;  
+  scroll-behavior: smooth;
+  scroll-padding-top: 10px;
+
+} 
+
+/*----nav  image  section----*/
+section
+{
+  padding: 20px;
+  max-width: 1200px;
+  margin:0 auto;
+}
+
+/* facility start */
+.heading
+{
+  text-align: center;
+  margin-bottom: 3rem;
+  
+}
+
+.heading img
+{
+height: 160px;
+margin-bottom: -50px;
+
+}
+
+.heading h3
+{
+font-size: 20px;
+color: var(--black);
+font-family:'Merienda One', cursive;
+}
+
+
+
+
+
+/* button about us */
+.btn
+{
+display:inline-block;
+margin-top: 10px;
+background-color: var(--main-color);
+cursor: pointer;
+color: var(--white);
+font-size: 19px;
+padding: 11px 23px;
+
+
+}
+
+.btn:hover
+{
+  background-color: var(--black);
+  border-radius: 30px;
+  box-shadow: var(--box-shadow);
+  font-family:'Merienda One', cursive; 
+}
+
+
+ 
+/*--header first small box --*/
+.header
+{
+  
+  position:sticky;
+  top:0;
+  left:0;
+  right:0;
+  -webkit-backdrop-filter: blur(100%);
+   backdrop-filter: blur(10px);
+   box-shadow: var(--box-shadow);
+   z-index: 1;
+}
+
+
+/*flex use logoimg (nearby text)*/
+
+.header .flex
+{
+    display: flex;
+    align-items: center;
+     justify-content:space-between;
+    position: relative;
+    padding:15px ;
+  
+  } 
+  
+/*first box home about height width*/
+.header .flex 
+{
+height: 80px;
+}
+
+
+.logo img
+{
+  height:70px;
+}
+
+ 
+
+/* home buttons and first box font size*/
+
+.header .flex .navbar a
+{
+  margin-left: 25px;
+  font-size: 20px;  
+  color: var(--black);
+}
+
+
+.header .flex .navbar a:hover
+{
+    text-decoration: none;
+    font-weight: bold;
+    font-size:19px;
+    color: var(--main-color);
+    font-family:'Merienda One', cursive; 
+}
+
+#menu-btn
+{
+  display:none;
+  font-size: 20px;
+  color:var(--black);
+  cursor: pointer;
+}
+
+/* home background image */
+.home-bg
+ {
+background:linear-gradient(80deg, var(--white), transparent 70%), url("coffie3.jpg") no-repeat;
+background-size: cover;
+background-position: center; 
+}
+
+/* back image and section */
+.home-bg .home
+{
+  min-height: 700px;
+  display:flex;
+  align-items: center;
+}
+
+/* back image and section and p h3 */
+.home-bg .home .content
+{
+  width: 50rem;
+  text-align: center;
+}
+
+
+.home-bg .home .content h3
+{
+  font-size: 60px;
+  color:var(--black);
+  font-family:'Merienda One', cursive;
+}
+
+.home-bg .home .content p
+{
+padding:7px;
+font-size: 15px;
+color:var(--black);
+line-height: 1.8; 
+}
+
+/*story set image position start*/
+.about
+{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:35px;
+}
+
+.about .image
+{
+   flex: 390px; 
+   
+
+}
+
+
+
+ 
+
+.about .image img
+{
+  margin-top: 45px;
+}
+
+.about .image img
+{
+  width:100%;
+   animation: animate 3s linear infinite; 
+
+}
+ @keyframes animate
+
+
+{
+0%
+{
+filter:hue-rotate(0deg); 
+
+}
+50%
+{
+  filter:hue-rotate(450deg); 
+  
+}
+
+} 
+
+.about .content
+{
+  flex: 390px;
+}
+
+
+
+.about .content h3
+{
+  font-size: 25px;
+  color: var(--black);
+  font-family:'Merienda One', cursive;
+  padding-bottom: 9px;
+}
+
+.about .content p
+{
+  padding: 10px;
+  line-height:  3;
+  color: var(--light-color);
+  font-size:13px ;
+}
+
+/* facility section start*/
+
+.facility .box-container
+{
+
+ display: grid;
+grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));   
+gap:25px;
+align-items: flex-start; 
+}
+
+
+/* facility img align */
+
+.facility .box-container .box
+{
+  text-align: center;
+  
+}
+
+.facility .box-container .box img
+{
+  height: 120px;
+  margin-bottom: 1px ;
+  
+}
+
+ .bunimg 
+{
+  height: 5px;
+  width: 60px;
+  
+} 
+.facility .box-container .box h3
+{
+  font-size: 19px;
+  color: var(--black);
+  margin:.5px ;
+  
+}
+
+.facility .box-container .box p
+{
+  line-height: 2;
+  font-size: 15px;
+  color: var(--light-color);
+}
+
+
+/* menu section start */
+.menu .box-container .box1 .mc
+ {
+  position: relative;
+  top:20px;
+ }
+
+
+
+.menu .box-container
+{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, 30rem);   
+  gap: -90px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+.menu .box-container .box1
+{
+  text-align: center;
+
+}
+
+.menu .box-container .box1 
+{
+  width: 250px;
+  margin-bottom: .10px;
+}
+.box1 img
+{
+  height:200px;
+  width: 200px;
+}
+
+.menu .box-container .box1  h3
+{
+  font-size: 19px;
+  color: var(--black);
+}
+
+
+
+
+
+ /* gallery section start */
+.gallery .box-container1
+{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, 33rem); 
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+
+.gallery .box-container1 img
+{
+height: 100%;
+width: 100%;
+object-fit: cover;
+ box-shadow: 15px 20px 20px rgba(0,0,0,.9), 
+inset 4px 4px 10px rgb(255, 255, 255) ;
+border-radius: 3px;
+
+}
+
+
+
+/* team section start */
+.h1
+{
+  font-size:20px;
+  font-family:'Merienda One', cursive;
+  cursor: pointer;
+
+}
+
+
+ .box-container2 .box
+{
+  margin: 0px;
+  padding: 0px;
+  height: 300px; 
+  /* margin: 90px; */
+
+}
+
+ .box-container2
+{
+display: grid;  
+grid-template-columns: repeat(auto-fit, 30rem);
+gap: 2.5rem; 
+justify-content: center; 
+transition: 1s; 
+}
+ 
+
+ .team .box-container2 .box img
+{
+  height: 250px;
+  width:100%;
+  object-fit: cover; 
+  overflow: hidden;
+   border-radius: 3px;
+  transition:  .5s; 
+}
+ 
+ .team .box-container2 .box
+{
+  
+  text-align: center;
+  height: 300px;
+  box-shadow: 5px 5px 20px rgb(11, 9, 9);
+  font-family:'Merienda One', cursive; 
+  font-weight: bold;
+}
+
+  .team .box-container2 .box .intro
+{
+  height: 50px;
+  width: 300px;
+  padding: 5px;
+  box-sizing: border-box;
+  position: relative; 
+  background: rgba(21, 21, 21, 0.5);
+  /* background:linear-gradient(to right,#04ff3f,#ff005d 100%); */
+  text-align:center;
+  color:orangered;
+  font-family:'Merienda One', cursive; 
+  transition: .2s;
+}
+
+.team .box-container2 .box .intro h1
+{
+margin: 1px;
+font-size: 30px;
+color: var(--black);
+}
+
+.box .intro p
+{
+  visibility: hidden;
+}
+ 
+
+ .box-container2 .box:hover
+{  
+   cursor: pointer;
+   background-color:rgb(42, 42, 93);
+   -webkit-backdrop-filter: blur(100%);
+   backdrop-filter: blur(0px);
+   border-radius: 5px;
+}
+
+ .gallery .box:hover .intro
+{
+  cursor: pointer;
+  height: 120px;
+  bottom: 90px;
+  -webkit-backdrop-filter: blur(100%);
+   backdrop-filter: blur(10px);
+   border-radius: 5px;
+ }
+
+.box:hover p 
+{
+color: #fff;
+visibility: visible; 
+font-size: 15px;
+line-height: 2;
+}  
+
+.gallery .box:hover img
+{
+  transform: rotate(1.1);
+}
+
+
+
+
+
+
+
+/* contact section start */
+
+.contact .row
+{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:20px;
+}
+
+.contact .row .image
+{
+  flex: 500px; 
+  animation: animate 3s linear infinite;
+}
+
+/* img lightting */
+
+@keyframes animate
+{
+0%
+{
+filter:hue-rotate(0deg);
+}
+100%
+{
+  filter:hue-rotate(360deg);
+}
+
+}
+
+.contact .row .image img
+{
+width: 100%;
+}
+
+.contact .row form
+{
+  flex: 600px;
+  border: var(--border);
+  padding: 20px;
+  text-align: center;
+}
+
+.contact .row form h3
+{
+font-size: 30px;
+margin-bottom: 3px;
+color: var(--black);
+font-family:'Merienda One', cursive;
+}
+
+.contact .row form .box
+{
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  color: var(--black);
+  border: var(--border);
+  margin: 1rem 0;
+}
+
+
+/* footer section starts */
+
+ .footer .box-container
+{
+    display:flex;
+    gap:150px; 
+}
+
+.footer .box-container .box
+{
+  text-align: center;
+ margin-top: 50px;
+} 
+
+.footer .box-container .box i
+{
+  cursor: pointer;
+  font-size:  30px;
+   line-height: 45px; 
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  color: var(--white);
+
+}
+
+.footer .box-container .box h3
+{
+  margin: 5rem 0;
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.footer .box-container .box p
+{
+ margin-bottom: 8px;
+ line-height: 2;
+ font-size: 15px;
+ color: var(--light-color);
+}
+
+
+  
+/* media queries*/
+
+@media (max-width:991px)
+{
+  html
+  {
+    font-size:55%;
+  }
+}
+
+/* responsive mobile view */
+@media (max-width:768px)
+{
+  #menu-btn
+  {
+    display: inline-block;
+     transition: .2s linear; 
+  }
+
+  #menu-btn.fa-times
+  {
+    transform: rotate(180deg);
+  }
+
+  .header .flex .navbar
+  {
+    position: absolute;
+    top:99%; left:0; right: 0;
+    background-color: var(--white);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    /*clip path don't display home buttons*/
+     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); 
+    /* rotate nav*/
+    transition: .2s linear; 
+  }
+  
+  /*clip path size full*/
+   .header .flex .navbar.active
+  {
+  /* display home buttons */
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  } 
+  
+  .header .flex .navbar a
+  {
+    display: block;
+    margin: 15px;
+  }
+  /*responsive with content align start*/
+  .home-bg
+  {
+    background-position: left;
+
+  }
+  .home-bg .home
+
+  {
+    justify-content: center;
+  }
+  /*end*/
+
+  .home-bg .home .content h3
+  {
+    font-size: 35px;
+  }
+  .about .content h3
+  {
+    font-size:25px;
+  }
+ 
+  
+  .footer .box-container 
+  {
+    display: block;
+  }
+  /* .footer .box-container .box
+  {
+    
+    
+  } */
+  
+  
+
+
+
+   
+}
+@media (max-width:450px)
+{
+  html
+  {
+    font-size:50%;
+  }
+  .heading img
+  {
+    height: 3rem;
+  }
+
+  .heading h3
+  {
+    font-size: 3rem;
+  }
+  
+  
+
+}

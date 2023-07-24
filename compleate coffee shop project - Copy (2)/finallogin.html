@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
+
+    /*  Positioning login  form */
+    body
+    {
+      background-image: url("loginimg1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:765px;
+        width:fit-content;
+         color:rgb(0, 0, 0);
+         
+        
+    }
+    
+   #name
+    {  
+        font-family:'Merienda One', cursive;
+        border: none; 
+        font-size: 17px; 
+        height: 40px;
+        width: 200px;
+        background-color: rgb(110, 66, 11);
+    }
+    
+
+/* css start */
+.Q 
+{
+  
+  transform: translate(120px,-50px);
+  display: grid;
+  height: 550px;
+  width: 600px;
+  position:absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  place-items: center;
+  z-index: -1;
+ 
+
+
+}
+form
+{
+z-index: 1;
+}
+
+ 
+
+
+/* username and password buttons */
+#name 
+{
+  box-shadow: 15px 20px 20px rgba(0,0,0,.9), 
+  inset 4px 4px 10px rgb(255, 255, 255) ; 
+  outline: none;
+  margin-bottom: 20px;
+  padding: 5px;
+  width: 250px;
+  border-radius: 10px;
+  color: black;
+}
+
+/* submit button */
+#button 
+{
+  border-radius: 50px;
+  box-shadow: 15px 20px 20px rgba(0,0,0,.9), 
+  inset 4px 4px 10px rgb(255, 255, 255) ; 
+  border: 15px;
+  padding: 6px 10px; 
+  margin-top: 25px;
+  outline: none;
+  margin-left: 75px; 
+  background-color:rgb(94, 52, 10); 
+  height: 40px;
+  width: 70px;
+  font-family:'Merienda One', cursive;
+}
+
+#button:hover
+{
+  animation: animate 3s  infinite;
+} 
+@keyframes animate
+{
+25%
+{
+color: azure;
+transform: rotate(-10deg);   
+}
+45%
+{
+color: rgb(0, 23, 65);
+transform: rotate(10deg);
+}
+55%
+{
+color: darkgreen;
+}
+
+}
+/* Forget password?-text */
+ a:hover
+{
+  font-size: 19px;
+  cursor: pointer;
+  color: rgb(232, 125, 2);
+  
+
+} 
+
+a
+{
+  margin-left: 50px;
+  text-decoration: none;
+  color: azure;
+  font-size: 15px;
+} 
+
+/* while mouse hover on submit button */
+#button:hover 
+{
+   color:rgb(228, 228, 228);
+   cursor: pointer;
+   border-radius: 5px;
+   height: 50px;
+   width: 100px;
+   text-align: center;
+   font-size: 20px;
+}
+
+</style>
+<body>
+   <!--html start  -->
+  
+  
+  <div class="Q"> 
+        <!-- onsubmit event -->
+          <form name="E" action="project1.html" onsubmit="return login()">
+            <input type="text" placeholder="username" name="R" id="name" /><br />
+            <input type="password" placeholder="password" name="T" id="name"/><br />
+            <a href="">Forget password?</a><br />
+            <button id="button">Submit</button>
+          </form>
+        </div>
+      </div>
+</body>
+<!-- javascript start -->
+<script>
+function login() 
+{
+    var name = document.E.R.value;
+    var pass = document.E.T.value;
+    if (name == "barkavi" && pass == "bar@123") 
+    {
+      return true;
+    } 
+    else if (name != "barkavi" && pass == "bar@123") 
+    {
+      alert("Enter valid name");
+      return false;
+    } 
+    else 
+    {
+      alert("Enter valid password");
+      return false;
+    }
+  }
+   </script>
+</html>
